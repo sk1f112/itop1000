@@ -1,0 +1,8 @@
+<!-- currency-header.component.html -->
+<div class="header">
+    <h1>Курс валют</h1>
+    <div *ngFor="let rate of exchangeRates" class="cash">
+      <p class="{{ rate.cc }}">{{ rate.cc }}: {{ rate.rate }} UAH</p>
+    </div>
+</div>
+  

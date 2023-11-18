@@ -1,0 +1,22 @@
+<div class="converter">
+  
+  <div class="converter_block">
+    <label for="amount1" class="title">Кількість першої валюти:</label>
+    <input type="number" id="amount1" [(ngModel)]="amount1" (input)="onInput1Change()" />
+    
+    <label for="currency1" class="subtitle">Вибір валюти:</label>
+    <select id="currency1" [(ngModel)]="selectedCurrency1" (change)="onCurrency1Change()">
+      <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+    </select>
+  </div>
+  
+  <div class="converter_block">
+    <label for="amount2" class="title">Кількість другої валюти:</label>
+    <input type="number" id="amount2" [(ngModel)]="amount2" (input)="onInput2Change()" />
+    
+    <label for="currency2" class="subtitle">Вибір валюти:</label>
+    <select id="currency2" [(ngModel)]="selectedCurrency2" (change)="onCurrency2Change()">
+      <option *ngFor="let currency of currencies" [value]="currency">{{ currency }}</option>
+    </select>
+  </div>
+</div>
